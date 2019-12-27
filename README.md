@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ```ruby
 Sidekiq::Metrics.configure do |config|
-  config.adatper = Sidekiq::metrics::Adapter::Mysql.new({
+  config.adatper = Sidekiq::Metrics::Adapter::Mysql.new({
     database: 'DB_NAME',
     username: 'DB_USERNAME',
     password: 'DB_PASSWORD'
