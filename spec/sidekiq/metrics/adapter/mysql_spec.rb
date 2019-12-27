@@ -1,9 +1,5 @@
-RSpec.describe Sidekiq::Metrics::Adapter::Mysql do
-  it "has a version number" do
-    expect(Sidekiq::Metrics::Adapter::Mysql::VERSION).not_to be nil
-  end
+# frozen_string_literal: true
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+RSpec.describe Sidekiq::Metrics::Adapter::Mysql do
+  pending
 end
