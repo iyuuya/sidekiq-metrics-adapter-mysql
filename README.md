@@ -23,21 +23,20 @@ Or install it yourself as:
 ```ruby
 Sidekiq::Metrics.configure do |config|
   config.adatper = Sidekiq::metrics::Adapter::Mysql.new({
-      database: 'DB_NAME',
-      username: 'DB_USERNAME',
-      password: 'DB_PASSWORD'
-      host: 'localhost'
-      port: 3306,
+    database: 'DB_NAME',
+    username: 'DB_USERNAME',
+    password: 'DB_PASSWORD'
+    host: 'localhost'
+    port: 3306,
       ...
-    },
-    'table_name',
-    async: true,
-    sidekiq_worker_options: {
-      queue: :default,
-      retry: 5
-      ...
-    }
-  )
+  },
+  'table_name',
+  async: true,
+  sidekiq_worker_options: {
+    queue: :default,
+    retry: 5
+    ...
+  })
 end
 ```
 
