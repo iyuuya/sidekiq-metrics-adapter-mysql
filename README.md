@@ -42,6 +42,21 @@ end
 
 see also : https://github.com/brianmario/mysql2#connection-options
 
+### Recommend table schema
+
+```sql
+CREATE TABLE IF NOT EXISTS sidekiq_logs (
+  queue VARCHAR(256),
+  class VARCHAR(256),
+  retry INT NOT NULL DEFAULT 0,
+  jid VARCHAR(256),
+  status VARCHAR(256),
+  enqueued_at DOUBLE,
+  started_at DOUBLE,
+  finished_at DOUBLE
+)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
